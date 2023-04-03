@@ -1,0 +1,16 @@
+.game-section {
+    cursor: url("../../../assets/aim-cursor.png") 30 30, auto;
+    width: 50%;
+    background-color: #1A1516;
+    height: 100%;
+    overflow: hidden;
+}
+.evil-task {
+    width: 80px;
+    height: 80px;
+}
+
+.evil-task-img {
+    width: 100%;
+    height: 100%;
+}

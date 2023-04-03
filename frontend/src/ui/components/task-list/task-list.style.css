@@ -1,0 +1,12 @@
+.task-list-section {
+    background-color: #8F4D57;
+    width: 50%;
+    padding: 0 80px;
+}
+
+.task-list-container {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

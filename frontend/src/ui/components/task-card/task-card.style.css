@@ -1,0 +1,32 @@
+.task-card-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffff;
+    font-family: 'DotGothic16', sans-serif;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.task-card-content-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.task-card-name {
+    font-size: 36px;
+}
+
+.task-card-date {
+    color: grey;
+}
+
+.task-card-target-button {
+    background-color: transparent;
+    border: none;
+}
+
+.task-card-target-icon {
+    width: 40px;
+}
