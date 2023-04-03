@@ -1,43 +1,31 @@
 import "./game-section.style.css";
-import evilTaskImage from "../../../assets/evil-task.png";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { EvilTask } from "../evil-task/evil-task.component";
 
-export function GameSection() {
-  let intervalId;
-  const [x, setX] = useState(350);
-  const [y, setY] = useState(350);
-
-  useEffect(() => {
-    if (!intervalId) {
-        intervalId = setInterval(updatePointsRandomly, 900);
-      }
-    
-  }, [])
-
-  function updatePointsRandomly() {
-    setX(getRandomInt(600));
-    setY(getRandomInt(600));
+export function GameSection({ tasks, focusedTaskId }) {
+  function renderOneTaskOnly() {
+    return tasks?.map((task) => {
+      return (
+        <EvilTask
+          key={task.id}
+          id={task.id}
+          isVisible={focusedTaskId === task.id}
+          isMoving={focusedTaskId === task.id}
+        />
+      );
+    });
   }
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+  function renderAllTasks() {
+    return tasks?.map((task) => {
+      return (
+        <EvilTask key={task.id} id={task.id} isVisible={true} isMoving={true} />
+      );
+    });
   }
 
   return (
     <section className="game-section">
-      <motion.div
-        className="evil-task"
-        animate={{ x, y }}
-        transition={{ type: "spring", stiffness: 50 }}
-      >
-        <img
-          onClick={() => console.log("ATIROU E MATOU")}
-          className="evil-task-img"
-          src={evilTaskImage}
-          alt="Pixel art of a task icon with angry face"
-        />
-      </motion.div>
+      {focusedTaskId === null ? renderAllTasks() : renderOneTaskOnly()}
     </section>
   );
 }
