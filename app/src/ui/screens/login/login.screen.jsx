@@ -1,12 +1,12 @@
 import useTodoistAuth from "../../../hooks/use-todoist-auth/use-todoist-auth.hook";
 
 export function Login() {
-  const { handleLogin } = useTodoistAuth();
+  const { handleRedirect } = useTodoistAuth();
 
   return (
     <>
       <div>
-        <button onClick={handleLogin}>Log in with Todoist</button>
+        <button onClick={handleRedirect}>Log in with Todoist</button>
       </div>
     </>
   );

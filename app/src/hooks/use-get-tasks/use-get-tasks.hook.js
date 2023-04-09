@@ -9,6 +9,7 @@ export function useGetTasks() {
             const response = await getTasks();
             setTasks(response.data);
         } catch(error){
+            // TODO
             console.log(error);
         }
     }

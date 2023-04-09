@@ -1,1 +1,6 @@
 /design
+
+
+/api/.env
+/api/__pycache__
+/api/flask_session
