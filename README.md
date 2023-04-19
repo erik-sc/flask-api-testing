@@ -1,4 +1,4 @@
-# TaskHero
+# TaskHero (work in progress)
 
 <aside>
 💡 Tasklist mockup with game mechanics
